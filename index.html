@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Portafolio personal de Fabián David Marín - Desarrollo Web Front-End y Back-End." />
+    <title>Inicio | Portafolio de Fabián David Marín</title>
+
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body class="site-body">
+
+    <!-- =========================
+       CABECERA (HEADER)
+  ========================== -->
+    <header class="site-header" id="top">
+        <div class="header__brand">
+            <!-- Imagen de perfil (ruta estática para que la agregues luego) -->
+            <figure class="brand__figure">
+
+                <!-- OPTIMIZACIÓN: usa AVIF/WebP y deja el original como fallback.
+                     Nota: crea estos archivos en /img/:
+                     - foto-perfil.avif
+                     - foto-perfil.webp
+                     - (mantén foto-perfil.jpg como respaldo) -->
+                <picture class="brand__picture">
+                    <source type="image/avif" srcset="img/foto-perfil.avif" />
+                    <source type="image/webp" srcset="img/foto-perfil.webp" />
+                    <img class="brand__avatar brand__avatar--optimized" src="img/foto-perfil.jpg"
+                        alt="Foto de perfil profesional de Fabián David Marín (retrato con fondo neutro, estilo formal)"
+                        decoding="async" fetchpriority="high" />
+                </picture>
+
+                <figcaption class="brand__caption">
+                    <!-- Texto breve de identidad -->
+                    <strong class="brand__name">Fabián David Marín</strong>
+                    <span class="brand__role">Desarrollo Web · Front-End y Back-End</span>
+                </figcaption>
+            </figure>
+        </div>
+
+        <!-- =========================
+         NAVEGACIÓN PRINCIPAL
+         (Debe enlazar a otros HTML)
+    ========================== -->
+        <nav class="site-nav" aria-label="Navegación principal">
+            <ul class="nav__list">
+                <!-- Enlace a inicio (este mismo archivo) -->
+                <li class="nav__item"><a class="nav__link nav__link--active" href="index.html">Inicio</a></li>
+
+                <!-- Enlaces a páginas del sitio web (se implementan en otros archivos) -->
+                <li class="nav__item"><a class="nav__link" href="estudios.html">Estudios</a></li>
+                <li class="nav__item"><a class="nav__link" href="proyectos.html">Proyectos</a></li>
+                <li class="nav__item"><a class="nav__link" href="pasatiempos.html">Pasatiempos</a></li>
+                <li class="nav__item"><a class="nav__link" href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <!-- Frase corta tipo “hero” (solo texto, sin CSS) -->
+        <section class="header__intro" aria-label="Presentación breve">
+            <h1 class="intro__title">Portafolio personal</h1>
+            <p class="intro__subtitle">
+                Desarrollo soluciones web con calma, enfoque y disciplina: pienso la solución, diseño la estructura y
+                luego construyo con orden.
+            </p>
+        </section>
+    </header>
+
+    <!-- =========================
+       CONTENIDO PRINCIPAL
+       (Layout: sidebar + contenido)
+  ========================== -->
+    <main class="site-main">
+
+        <!-- =========================
+         BARRA LATERAL (ASIDE)
+         Útil para: resumen, datos rápidos, “enlaces internos”
+    ========================== -->
+        <aside class="sidebar" aria-label="Barra lateral con información rápida">
+            <section class="sidebar__card">
+                <h2 class="sidebar__title">En resumen</h2>
+                <ul class="sidebar__list">
+                    <li class="sidebar__item"><strong>Nombre:</strong> Fabián David Marín</li>
+                    <li class="sidebar__item"><strong>Ubicación:</strong> Popayán, Colombia</li>
+                    <li class="sidebar__item"><strong>Edad:</strong> 29 años</li>
+                    <li class="sidebar__item"><strong>Perfil:</strong> Desarrollo Web (Front-End / Back-End)</li>
+                </ul>
+            </section>
+
+            <section class="sidebar__card">
+                <h2 class="sidebar__title">Explorar el sitio</h2>
+                <!-- Enlaces internos hacia secciones del inicio (opcional, pero útil) -->
+                <nav class="sidebar__nav" aria-label="Navegación interna">
+                    <ul class="sidebar__list">
+                        <li class="sidebar__item"><a class="sidebar__link" href="#presentacion">Presentación</a></li>
+                        <li class="sidebar__item"><a class="sidebar__link" href="#enfoque">Mi enfoque</a></li>
+                        <li class="sidebar__item"><a class="sidebar__link" href="#metodologias">Metodologías</a></li>
+                        <li class="sidebar__item"><a class="sidebar__link" href="#galeria">Galería</a></li>
+                    </ul>
+                </nav>
+            </section>
+
+            <!-- Imagen extra (para que no sea puro texto) -->
+            <figure class="sidebar__figure">
+
+                <!-- OPTIMIZACIÓN: versiones modernas + lazy-load por ser imagen secundaria -->
+                <picture class="sidebar__picture">
+                    <source type="image/avif" srcset="img/imagen-popayan.avif" />
+                    <source type="image/webp" srcset="img/imagen-popayan.webp" />
+                    <img class="sidebar__image sidebar__image--optimized" src="img/imagen-popayan.jpg"
+                        alt="Imagen representativa de Popayán, Colombia (arquitectura colonial, calles blancas, paisaje urbano)"
+                        loading="lazy" decoding="async" />
+                </picture>
+
+                <figcaption class="sidebar__caption">
+                    Popayán, Colombia — ciudad que inspira mi calma y enfoque.
+                </figcaption>
+            </figure>
+        </aside>
+
+        <!-- =========================
+         SECCIÓN DE CONTENIDO (ARTICLE/SECTIONS)
+    ========================== -->
+        <article class="content" aria-label="Contenido principal de inicio">
+
+            <!-- ===== Presentación personal ===== -->
+            <section class="content__section" id="presentacion">
+                <header class="section__header">
+                    <h2 class="section__title">Hola, soy Fabián David Marín</h2>
+                    <p class="section__lead">
+                        Soy una persona tranquila, serena y orientada a la calma. Esa forma de ser se refleja en mi
+                        manera de trabajar:
+                        analizo con claridad, priorizo lo importante y ejecuto con responsabilidad.
+                    </p>
+                </header>
+
+                <div class="section__grid">
+                    <!-- Bloque de texto principal -->
+                    <div class="section__text">
+                        <p class="section__paragraph">
+                            Mi pasión es el <strong>desarrollo de software</strong>, especialmente en el área de
+                            <strong>desarrollo web</strong> tanto
+                            <strong>Front-End</strong> como <strong>Back-End</strong>. Me motiva construir soluciones
+                            que sean útiles, ordenadas y fáciles
+                            de mantener.
+                        </p>
+
+                        <p class="section__paragraph">
+                            A lo largo de mi evolución como programador, he fortalecido una mentalidad enfocada en la
+                            <strong>calidad</strong>:
+                            primero pienso en la solución antes de “picar código”. Me gusta definir una
+                            <strong>arquitectura</strong>,
+                            aplicar <strong>patrones de diseño</strong> y trabajar con principios como
+                            <strong>SOLID</strong> para mantener un desarrollo
+                            limpio y consistente.
+                        </p>
+
+                        <p class="section__paragraph">
+                            Disfruto aceptar desafíos y afrontarlos con <strong>disciplina</strong> y
+                            <strong>responsabilidad</strong>. Si estás buscando
+                            a alguien que combine enfoque técnico con orden y criterio, este portafolio es una buena
+                            forma de conocer mi estilo de trabajo.
+                        </p>
+                    </div>
+
+                    <!-- Bloque visual (imagen relacionada con desarrollo) -->
+                    <figure class="section__figure">
+
+                        <!-- OPTIMIZACIÓN: si tu original era PNG pesado, aquí apuntas a AVIF/WebP + fallback -->
+                        <picture class="section__picture">
+                            <source type="image/avif" srcset="img/imagen-desarrollo-web.avif" />
+                            <source type="image/webp" srcset="img/imagen-desarrollo-web.webp" />
+                            <img class="section__image section__image--optimized" src="img/imagen-desarrollo-web.webp"
+                                alt="Imagen conceptual de desarrollo web (pantalla con código, elementos de interfaz y diseño)"
+                                loading="lazy" decoding="async" />
+                        </picture>
+
+                        <figcaption class="section__caption">
+                            Desarrollo web con enfoque: estructura, claridad y soluciones sostenibles.
+                        </figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <!-- ===== Enfoque / mentalidad ===== -->
+            <section class="content__section" id="enfoque">
+                <header class="section__header">
+                    <h2 class="section__title">Mi enfoque al construir software</h2>
+                </header>
+
+                <div class="section__grid">
+                    <div class="section__text">
+                        <p class="section__paragraph">
+                            Para mí, un buen resultado no depende solo de “que funcione”, sino de <strong>cómo está
+                                construido</strong>.
+                            Por eso procuro seguir un proceso ordenado:
+                        </p>
+
+                        <!-- Lista para explicar el proceso sin meter JS/CSS -->
+                        <ol class="section__list">
+                            <li class="section__list-item">
+                                <strong>Comprender el problema:</strong> identificar objetivos, restricciones y
+                                expectativas.
+                            </li>
+                            <li class="section__list-item">
+                                <strong>Diseñar la solución:</strong> proponer una arquitectura y dividir en componentes
+                                claros.
+                            </li>
+                            <li class="section__list-item">
+                                <strong>Implementar con criterio:</strong> aplicar patrones, principios SOLID y buenas
+                                prácticas.
+                            </li>
+                            <li class="section__list-item">
+                                <strong>Mantener el orden:</strong> priorizar legibilidad, consistencia y
+                                mantenibilidad.
+                            </li>
+                        </ol>
+
+                        <p class="section__paragraph">
+                            Este enfoque me ayuda a entregar soluciones más confiables y a facilitar el crecimiento del
+                            proyecto en el tiempo.
+                        </p>
+                    </div>
+
+                    <figure class="section__figure">
+
+                        <!-- OPTIMIZACIÓN: AVIF/WebP + fallback -->
+                        <picture class="section__picture">
+                            <source type="image/avif" srcset="img/imagen-arquitectura-software.avif" />
+                            <source type="image/webp" srcset="img/imagen-arquitectura-software.webp" />
+                            <img class="section__image section__image--optimized"
+                                src="img/imagen-arquitectura-software.webp"
+                                alt="Diagrama ilustrativo de arquitectura de software (capas o componentes conectados, estilo simple)"
+                                loading="lazy" decoding="async" />
+                        </picture>
+
+                        <figcaption class="section__caption">
+                            Arquitectura primero: pensar, estructurar y luego construir.
+                        </figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <!-- ===== Metodologías / requisitos ===== -->
+            <section class="content__section" id="metodologias">
+                <header class="section__header">
+                    <h2 class="section__title">Requisitos y trabajo ágil</h2>
+                    <p class="section__lead">
+                        Además del desarrollo, también he trabajado en <strong>ingeniería de requisitos</strong>,
+                        levantando y documentando
+                        necesidades del cliente.
+                    </p>
+                </header>
+
+                <div class="section__grid">
+                    <div class="section__text">
+                        <p class="section__paragraph">
+                            Me siento cómodo colaborando con equipos bajo metodologías ágiles como
+                            <strong>SCRUM</strong> y <strong>KANBAN</strong>.
+                            Me interesa que el proceso sea claro: entender lo que el cliente necesita, organizarlo
+                            correctamente y convertirlo
+                            en entregables incrementales.
+                        </p>
+
+                        <!-- Un bloque tipo “nota” usando un contenedor genérico -->
+                        <div class="section__note" role="note">
+                            <p class="note__text">
+                                <strong>Idea clave:</strong> un buen producto nace de buenos requisitos y un desarrollo
+                                disciplinado.
+                            </p>
+                        </div>
+                    </div>
+
+                    <figure class="section__figure">
+
+                        <!-- OPTIMIZACIÓN: AVIF/WebP + fallback -->
+                        <picture class="section__picture">
+                            <source type="image/avif" srcset="img/imagen-metodologias-agiles.avif" />
+                            <source type="image/webp" srcset="img/imagen-metodologias-agiles.webp" />
+                            <img class="section__image section__image--optimized"
+                                src="img/imagen-metodologias-agiles.webp"
+                                alt="Imagen representativa de metodologías ágiles (tablero kanban, post-its o sprints, ambiente de equipo)"
+                                loading="lazy" decoding="async" />
+                        </picture>
+
+                        <figcaption class="section__caption">
+                            Agilidad con orden: claridad en requisitos y avance constante.
+                        </figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <!-- ===== Galería simple (para equilibrar texto/imagen) ===== -->
+            <section class="content__section" id="galeria" aria-label="Galería de imágenes">
+                <header class="section__header">
+                    <h2 class="section__title">Galería</h2>
+                    <p class="section__lead">
+                        Algunas imágenes de referencia para reforzar visualmente mi perfil.
+                    </p>
+                </header>
+
+                <!-- Galería básica sin CSS: lista de figuras -->
+                <div class="gallery">
+                    <figure class="gallery__item">
+
+                        <!-- OPTIMIZACIÓN: AVIF/WebP + fallback -->
+                        <picture class="gallery__picture">
+                            <source type="image/avif" srcset="img/imagen-frontend.avif" />
+                            <source type="image/webp" srcset="img/imagen-frontend.webp" />
+                            <img class="gallery__image gallery__image--optimized" src="img/imagen-frontend.webp"
+                                alt="Imagen alusiva a Front-End (componentes UI, diseño web, maquetación)"
+                                loading="lazy" decoding="async" />
+                        </picture>
+
+                        <figcaption class="gallery__caption">Front-End: interfaces claras y consistentes.</figcaption>
+                    </figure>
+
+                    <figure class="gallery__item">
+
+                        <!-- OPTIMIZACIÓN: AVIF/WebP + fallback -->
+                        <picture class="gallery__picture">
+                            <source type="image/avif" srcset="img/imagen-backend.avif" />
+                            <source type="image/webp" srcset="img/imagen-backend.webp" />
+                            <img class="gallery__image gallery__image--optimized" src="img/imagen-backend.webp"
+                                alt="Imagen alusiva a Back-End (servidores, APIs, bases de datos, arquitectura)"
+                                loading="lazy" decoding="async" />
+                        </picture>
+
+                        <figcaption class="gallery__caption">Back-End: lógica sólida y estructurada.</figcaption>
+                    </figure>
+
+                    <figure class="gallery__item">
+
+                        <!-- OPTIMIZACIÓN: AVIF/WebP + fallback -->
+                        <picture class="gallery__picture">
+                            <source type="image/avif" srcset="img/imagen-disciplinado.avif" />
+                            <source type="image/webp" srcset="img/imagen-disciplinado.webp" />
+                            <img class="gallery__image gallery__image--optimized" src="img/imagen-disciplinado.webp"
+                                alt="Imagen que represente disciplina y enfoque (persona trabajando concentrada, escritorio ordenado)"
+                                loading="lazy" decoding="async" />
+                        </picture>
+
+                        <figcaption class="gallery__caption">Disciplina y responsabilidad como base.</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <!-- ===== Llamado a la acción (sin inventar contacto) ===== -->
+            <section class="content__section" aria-label="Llamado a la acción">
+                <header class="section__header">
+                    <h2 class="section__title">¿Quieres conocer más?</h2>
+                </header>
+
+                <p class="section__paragraph">
+                    Puedes navegar por las demás secciones del sitio para ver mis estudios, proyectos y más información.
+                    Si deseas escribirme, visita la página de <a class="content__link"
+                        href="contacto.html">Contacto</a>.
+                </p>
+
+                <!-- Enlace para volver arriba -->
+                <p class="section__paragraph">
+                    <a class="content__link" href="#top">Volver al inicio</a>
+                </p>
+            </section>
+
+        </article>
+    </main>
+
+    <!-- =========================
+       PIE DE PÁGINA (FOOTER)
+  ========================== -->
+    <footer class="site-footer" aria-label="Pie de página">
+        <p class="footer__text">
+            &copy; <span class="footer__year">2025</span> · Portafolio de Fabián David Marín · Sitio Web personal
+        </p>
+
+        <!-- Nota: sin inventar datos de contacto aquí; solo referencia de navegación -->
+        <nav class="footer__nav" aria-label="Navegación del pie de página">
+            <ul class="footer__list">
+                <li class="footer__item"><a class="footer__link" href="index.html">Inicio</a></li>
+                <li class="footer__item"><a class="footer__link" href="estudios.html">Estudios</a></li>
+                <li class="footer__item"><a class="footer__link" href="proyectos.html">Proyectos</a></li>
+                <li class="footer__item"><a class="footer__link" href="pasatiempos.html">Pasatiempos</a></li>
+                <li class="footer__item"><a class="footer__link" href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+</body>
+
+</html>
