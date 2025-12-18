@@ -1121,19 +1121,6 @@ a:focus-visible {
 }
 
 /* --------
-   Clases "modificador" (listas para personalizar cada hobby)
-   (sin cambios agresivos, solo hook visual)
--------- */
-.hobby-card--gaming,
-.hobby-card--guitar,
-.hobby-card--photo,
-.hobby-card--meditation,
-.hobby-card--gym,
-.hobby-card--walk {
-    /* Hook para estilos futuros (si quieres iconos, colores por hobby, etc.) */
-}
-
-/* --------
    Optimizadores (BEM modifiers) para imágenes/picture:
    No cambian el diseño, solo aseguran consistencia (por si luego ajustas).
 -------- */
@@ -1162,5 +1149,164 @@ a:focus-visible {
     .hobby-card__image {
         height: 200px;
         /* consistente con tu ajuste móvil de .gallery__image */
+    }
+}
+
+/* 11.1) Detalle visual en el título de la sección */
+.contact .section__title {
+    position: relative;
+}
+
+.contact .section__title::after {
+    content: "";
+    display: block;
+    width: 92px;
+    height: 4px;
+    margin-top: 10px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--accent-2), transparent);
+    opacity: 0.9;
+}
+
+/* 11.2) Contenedor del formulario */
+.contact-form {
+    margin-top: var(--space-4);
+    display: grid;
+    gap: var(--space-3);
+
+    /* Lectura cómoda en pantallas grandes */
+    max-width: 760px;
+}
+
+/* 11.3) Grupo (label + input + hint) */
+.form__group {
+    display: grid;
+    gap: 10px;
+}
+
+.form__label {
+    font-family: var(--font-title);
+    letter-spacing: 0.2px;
+    font-size: 0.98rem;
+    color: var(--text);
+}
+
+/* Inputs y textarea (look & feel de “card” suave) */
+.form__input,
+.form__textarea {
+    width: 100%;
+    padding: 12px 14px;
+
+    color: var(--text);
+    background: rgba(15, 26, 49, 0.55);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+
+    outline: none;
+    transition: border-color 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+}
+
+.form__textarea {
+    resize: vertical;
+    /* permite ampliar sin romper layout */
+    min-height: 140px;
+    line-height: 1.5;
+}
+
+.form__input::placeholder,
+.form__textarea::placeholder {
+    color: rgba(184, 194, 230, 0.75);
+}
+
+/* Estados hover/focus accesibles */
+.form__input:hover,
+.form__textarea:hover {
+    border-color: rgba(255, 138, 42, 0.35);
+}
+
+.form__input:focus-visible,
+.form__textarea:focus-visible {
+    border-color: rgba(255, 178, 106, 0.55);
+    box-shadow: 0 0 0 4px rgba(255, 138, 42, 0.14);
+}
+
+/* Texto de ayuda */
+.form__hint {
+    margin: 0;
+    font-size: 0.92rem;
+    color: var(--muted);
+}
+
+/* 11.4) Acciones (botón + nota) */
+.form__actions {
+    margin-top: 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.form__button {
+    padding: 10px 16px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text);
+
+    font-family: var(--font-title);
+    letter-spacing: 0.2px;
+
+    cursor: pointer;
+    transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.form__button:hover {
+    text-decoration: none;
+    background: rgba(255, 138, 42, 0.12);
+    border-color: rgba(255, 138, 42, 0.35);
+    transform: translateY(-1px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.22);
+}
+
+.form__button:focus-visible {
+    outline: 3px solid rgba(255, 138, 42, 0.55);
+    outline-offset: 3px;
+}
+
+.form__disclaimer {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.95rem;
+    max-width: 52ch;
+}
+
+.contact .section__paragraph {
+    margin-top: var(--space-4);
+}
+
+/* asegura que el link no quede pegado si el párrafo colapsa en algún caso */
+.contact .content__link {
+    display: inline-block;
+}
+
+/* 11.5) Responsive: acciones en columna y botón full-width */
+@media (max-width: 640px) {
+    .contact-form {
+        max-width: 100%;
+    }
+
+    .form__actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .form__button {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .form__disclaimer {
+        max-width: none;
     }
 }

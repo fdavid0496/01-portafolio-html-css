@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Contacto - Portafolio de Fabián David Marín. Formulario para enviar un mensaje." />
+    <title>Contacto | Portafolio de Fabián David Marín</title>
+
+    <!-- CSS externo (se reutiliza el mismo archivo para mantener consistencia visual) -->
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body class="site-body">
+
+    <!-- =========================
+       CABECERA (HEADER)
+  ========================== -->
+    <header class="site-header" id="top">
+
+        <!-- Marca / identidad (versión texto, sin imagen) -->
+        <div class="header__brand">
+            <div class="brand__caption" aria-label="Identidad del portafolio">
+                <strong class="brand__name">Fabián David Marín</strong>
+                <span class="brand__role">Desarrollo Web · Front-End y Back-End</span>
+            </div>
+        </div>
+
+        <!-- =========================
+         NAVEGACIÓN PRINCIPAL
+    ========================== -->
+        <nav class="site-nav" aria-label="Navegación principal">
+            <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="index.html">Inicio</a></li>
+                <li class="nav__item"><a class="nav__link" href="estudios.html">Estudios</a></li>
+                <li class="nav__item"><a class="nav__link" href="proyectos.html">Proyectos</a></li>
+                <li class="nav__item"><a class="nav__link" href="pasatiempos.html">Pasatiempos</a></li>
+
+                <!-- Página actual -->
+                <li class="nav__item"><a class="nav__link nav__link--active" href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <!-- Intro tipo “hero” (solo texto, consistente con el sitio) -->
+        <section class="header__intro" aria-label="Introducción de la sección de contacto">
+            <h1 class="intro__title">Contacto</h1>
+            <p class="intro__subtitle">
+                Si quieres escribirme por una propuesta, colaboración o comentario, usa el formulario.
+            </p>
+        </section>
+    </header>
+
+    <!-- =========================
+       CONTENIDO PRINCIPAL
+       (Layout: sidebar + contenido)
+  ========================== -->
+    <main class="site-main">
+
+        <!-- =========================
+         BARRA LATERAL (ASIDE)
+    ========================== -->
+        <aside class="sidebar" aria-label="Barra lateral con información de contacto">
+
+            <section class="sidebar__card">
+                <h2 class="sidebar__title">En resumen</h2>
+                <ul class="sidebar__list">
+                    <li class="sidebar__item"><strong>Propósito:</strong> Enviarme un mensaje desde el sitio</li>
+                    <li class="sidebar__item"><strong>Campos:</strong> Nombre · Correo · Mensaje</li>
+                    <li class="sidebar__item"><strong>Nota:</strong> No se realiza envío real (solo HTML)</li>
+                </ul>
+            </section>
+
+            <section class="sidebar__card">
+                <h2 class="sidebar__title">Consejos para escribir</h2>
+                <ul class="sidebar__list">
+                    <li class="sidebar__item"><strong>Asunto:</strong> indica el motivo (proyecto, vacante, idea)</li>
+                    <li class="sidebar__item"><strong>Contexto:</strong> qué necesitas y para cuándo</li>
+                    <li class="sidebar__item"><strong>Detalle:</strong> incluye enlaces o requisitos si aplica</li>
+                </ul>
+            </section>
+
+        </aside>
+
+        <!-- =========================
+         CONTENIDO PRINCIPAL (ARTICLE)
+    ========================== -->
+        <article class="content" aria-label="Contenido principal de contacto">
+
+            <!-- =========================
+               FORMULARIO DE CONTACTO
+               Requisito: nombre, correo, mensaje y botón enviar
+          ========================== -->
+            <section class="content__section contact" aria-label="Formulario de contacto">
+                <header class="section__header">
+                    <h2 class="section__title">Envíame un mensaje</h2>
+                    <p class="section__lead">
+                        Completa los campos y presiona <strong>Enviar</strong>.
+                    </p>
+                </header>
+
+                <!-- Nota: action="#" para evitar envío real. No JS. -->
+                <form class="contact-form" action="#" aria-label="Formulario para enviar un mensaje">
+
+                    <!-- Grupo: Nombre -->
+                    <div class="form__group">
+                        <label class="form__label" for="nombre">Nombre</label>
+                        <input class="form__input" type="text" id="nombre" name="nombre"
+                            placeholder="Tu nombre completo" autocomplete="name" required />
+                        <p class="form__hint" id="hint-nombre">Escribe tu nombre para identificarte.</p>
+                    </div>
+
+                    <!-- Grupo: Correo -->
+                    <div class="form__group">
+                        <label class="form__label" for="correo">Correo</label>
+                        <input class="form__input" type="email" id="correo" name="correo"
+                            placeholder="tunombre@correo.com" autocomplete="email" required />
+                        <p class="form__hint" id="hint-correo">Usa un correo válido para poder responderte.</p>
+                    </div>
+
+                    <!-- Grupo: Mensaje -->
+                    <div class="form__group">
+                        <label class="form__label" for="mensaje">Mensaje</label>
+                        <textarea class="form__textarea" id="mensaje" name="mensaje"
+                            placeholder="Cuéntame en qué te puedo ayudar..." rows="7" required></textarea>
+                        <p class="form__hint" id="hint-mensaje">Describe tu idea, proyecto o solicitud con claridad.</p>
+                    </div>
+
+                    <!-- Acciones -->
+                    <div class="form__actions">
+                        <button class="form__button" type="submit">Enviar</button>
+                    </div>
+
+                </form>
+
+                <!-- Enlace para volver arriba -->
+                <p class="section__paragraph">
+                    <a class="content__link" href="#top">Volver arriba</a>
+                </p>
+            </section>
+
+        </article>
+    </main>
+
+    <!-- =========================
+       PIE DE PÁGINA (FOOTER)
+       * Se mantiene igual al de las demás páginas para consistencia
+  ========================== -->
+    <footer class="site-footer" aria-label="Pie de página">
+        <p class="footer__text">
+            &copy; <span class="footer__year">2025</span> · Portafolio de Fabián David Marín · Sitio Web personal
+        </p>
+
+        <nav class="footer__nav" aria-label="Navegación del pie de página">
+            <ul class="footer__list">
+                <li class="footer__item"><a class="footer__link" href="index.html">Inicio</a></li>
+                <li class="footer__item"><a class="footer__link" href="estudios.html">Estudios</a></li>
+                <li class="footer__item"><a class="footer__link" href="proyectos.html">Proyectos</a></li>
+                <li class="footer__item"><a class="footer__link" href="pasatiempos.html">Pasatiempos</a></li>
+                <li class="footer__item"><a class="footer__link" href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+</body>
+
+</html>
