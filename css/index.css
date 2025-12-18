@@ -514,6 +514,38 @@ a:focus-visible {
     }
 }
 
+@media (max-width: 520px) {
+
+    /* Reset + separación vertical/horizontal clara entre filas */
+    .footer__list {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        /* Separación entre filas y columnas */
+        row-gap: 12px;
+        column-gap: 10px;
+    }
+
+    /* Asegura que cada <li> se comporte como “bloque” dentro del flex */
+    .footer__item {
+        display: flex;
+    }
+
+    /* Evita saltos raros dentro del botón */
+    .footer__link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
+    }
+}
+
+
 /* 8) Estudios (estudios.html) */
 .header__brand>.brand__caption {
     /* “Tarjeta” similar a la que ya usas con .brand__figure, pero versión compacta */
@@ -1004,5 +1036,131 @@ a:focus-visible {
 
     .project__highlights {
         padding: 12px 14px;
+    }
+}
+
+/* =========================================================
+   10) Pasatiempos (pasatiempos.html)
+   - Solo estilos nuevos para clases agregadas en pasatiempos.html
+   - Mantiene consistencia con la estética y variables del index.css
+========================================================= */
+
+/* --------
+   Ajustes de layout/texto para la sección "hobbies"
+   (aprovecha .section__grid y .section__paragraph existentes)
+-------- */
+.hobbies .section__text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* --------
+   Galería de pasatiempos
+   Nota: el contenedor ya tiene la clase .gallery (grid base).
+   Aquí afinamos el "look & feel" y dejamos clases para personalizar.
+-------- */
+.hobbies__grid {
+    /* Sobre-escribe el grid de .gallery SOLO en esta página */
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+/* Tarjeta (cada pasatiempo) */
+.hobby-card {
+    position: relative;
+    /* La base .gallery__item ya define fondo, borde y overflow */
+    transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* Línea superior de acento (detalle visual consistente con --accent / --accent-2) */
+.hobby-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, rgba(255, 138, 42, 0.95), rgba(255, 178, 106, 0.95));
+    pointer-events: none;
+}
+
+/* Hover suave (solo en estas tarjetas) */
+.hobby-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 138, 42, 0.35);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.28);
+}
+
+/* Ajuste de imagen para cards de pasatiempos (más “hero”) */
+.hobby-card__image {
+    height: 190px;
+    /* un poco más que la galería normal (160px) */
+    object-fit: cover;
+}
+
+/* Tipografía del pie de texto */
+.hobby-card__caption {
+    /* .gallery__caption ya tiene padding y color base;
+       aquí afinamos la lectura para título + texto */
+    line-height: 1.35;
+}
+
+.hobby-card__title {
+    display: block;
+    font-family: var(--font-title);
+    color: var(--text);
+    font-size: 1.05rem;
+    margin-bottom: 6px;
+    letter-spacing: 0.2px;
+}
+
+.hobby-card__text {
+    display: block;
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+/* --------
+   Clases "modificador" (listas para personalizar cada hobby)
+   (sin cambios agresivos, solo hook visual)
+-------- */
+.hobby-card--gaming,
+.hobby-card--guitar,
+.hobby-card--photo,
+.hobby-card--meditation,
+.hobby-card--gym,
+.hobby-card--walk {
+    /* Hook para estilos futuros (si quieres iconos, colores por hobby, etc.) */
+}
+
+/* --------
+   Optimizadores (BEM modifiers) para imágenes/picture:
+   No cambian el diseño, solo aseguran consistencia (por si luego ajustas).
+-------- */
+.sidebar__picture,
+.section__picture,
+.gallery__picture {
+    display: block;
+}
+
+.sidebar__image--optimized,
+.section__image--optimized,
+.gallery__image--optimized {
+    display: block;
+}
+
+/* --------
+   Responsive: evita que el override del grid rompa el comportamiento móvil
+   (tu CSS base ya pasa .gallery a 1 columna en <=980px, pero este bloque
+   asegura lo mismo para .hobbies__grid si este fragmento queda al final).
+-------- */
+@media (max-width: 980px) {
+    .hobbies__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hobby-card__image {
+        height: 200px;
+        /* consistente con tu ajuste móvil de .gallery__image */
     }
 }

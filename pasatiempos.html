@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Pasatiempos de Fabián David Marín: actividades que fortalecen disciplina, creatividad y bienestar (videojuegos, guitarra, fotografía, meditación, gimnasio y caminatas)." />
+    <title>Pasatiempos | Portafolio de Fabián David Marín</title>
+
+    <!-- CSS externo (se reutiliza el mismo archivo para mantener consistencia visual) -->
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body class="site-body">
+
+    <!-- =========================
+       CABECERA (HEADER)
+       * Consistente con estudios.html y proyectos.html (marca en texto)
+  ========================== -->
+    <header class="site-header" id="top">
+
+        <!-- Marca / identidad (versión texto, sin imagen) -->
+        <div class="header__brand">
+            <div class="brand__caption" aria-label="Identidad del portafolio">
+                <strong class="brand__name">Fabián David Marín</strong>
+                <span class="brand__role">Desarrollo Web · Front-End y Back-End</span>
+            </div>
+        </div>
+
+        <!-- =========================
+         NAVEGACIÓN PRINCIPAL
+    ========================== -->
+        <nav class="site-nav" aria-label="Navegación principal">
+            <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="index.html">Inicio</a></li>
+                <li class="nav__item"><a class="nav__link" href="estudios.html">Estudios</a></li>
+                <li class="nav__item"><a class="nav__link" href="proyectos.html">Proyectos</a></li>
+
+                <!-- Página actual -->
+                <li class="nav__item"><a class="nav__link nav__link--active" href="pasatiempos.html">Pasatiempos</a>
+                </li>
+
+                <li class="nav__item"><a class="nav__link" href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <!-- Intro tipo “hero” (solo texto) -->
+        <section class="header__intro" aria-label="Introducción de la sección de pasatiempos">
+            <h1 class="intro__title">Pasatiempos</h1>
+            <p class="intro__subtitle">
+                Fuera del código, mantengo hábitos que me ayudan a equilibrar mente y cuerpo: creatividad, disciplina y
+                bienestar. Estos pasatiempos también influyen en mi forma de trabajar: con calma, enfoque y constancia.
+            </p>
+        </section>
+    </header>
+
+    <!-- =========================
+       CONTENIDO PRINCIPAL
+       (Layout: sidebar + contenido)
+  ========================== -->
+    <main class="site-main">
+
+        <!-- =========================
+         BARRA LATERAL (ASIDE)
+         Restricción: NO incluir “Explorar Sitio” / “Explorar Página”
+    ========================== -->
+        <aside class="sidebar" aria-label="Barra lateral con resumen de pasatiempos">
+
+            <section class="sidebar__card">
+                <h2 class="sidebar__title">En resumen</h2>
+                <ul class="sidebar__list">
+                    <li class="sidebar__item"><strong>Equilibrio:</strong> mente (calma) + cuerpo (energía)</li>
+                    <li class="sidebar__item"><strong>Creatividad:</strong> música y fotografía</li>
+                    <li class="sidebar__item"><strong>Disciplina:</strong> gimnasio y constancia diaria</li>
+                    <li class="sidebar__item"><strong>Bienestar:</strong> meditación y caminatas</li>
+                </ul>
+            </section>
+
+            <section class="sidebar__card">
+                <h2 class="sidebar__title">Lo que me aportan</h2>
+                <ul class="sidebar__list">
+                    <li class="sidebar__item"><strong>Enfoque:</strong> entrenar atención y paciencia</li>
+                    <li class="sidebar__item"><strong>Creatividad:</strong> ver detalles y crear con intención</li>
+                    <li class="sidebar__item"><strong>Hábitos:</strong> ser constante incluso en días difíciles</li>
+                </ul>
+            </section>
+
+            <!-- Imagen extra (mismo patrón de index.html) -->
+            <figure class="sidebar__figure">
+                <picture class="sidebar__picture">
+                    <source type="image/avif" srcset="img/imagen-habitos.avif" />
+                    <source type="image/webp" srcset="img/imagen-habitos.webp" />
+                    <img class="sidebar__image sidebar__image--optimized" src="img/imagen-habitos.webp"
+                        alt="Imagen representativa de hábitos saludables (rutina, cuaderno de notas, taza de café, ambiente tranquilo)"
+                        loading="lazy" decoding="async" />
+                </picture>
+
+                <figcaption class="sidebar__caption">
+                    Mis pasatiempos son parte de mi rutina: me ayudan a mantener energía, claridad y estabilidad.
+                </figcaption>
+            </figure>
+
+        </aside>
+
+        <!-- =========================
+         CONTENIDO PRINCIPAL (ARTICLE)
+    ========================== -->
+        <article class="content" aria-label="Contenido principal de pasatiempos">
+
+            <!-- =========================
+               Contexto / introducción
+          ========================== -->
+            <section class="content__section hobbies" aria-label="Introducción de pasatiempos">
+                <header class="section__header">
+                    <h2 class="section__title">Lo que hago cuando no estoy programando</h2>
+                    <p class="section__lead">
+                        Estos pasatiempos reflejan cómo soy: me gustan las actividades con propósito, donde puedo
+                        aprender, mejorar y sentir progreso.
+                    </p>
+                </header>
+
+                <div class="section__grid">
+                    <div class="section__text">
+                        <p class="section__paragraph">
+                            En mi día a día busco un balance entre <strong>concentración</strong> y
+                            <strong>bienestar</strong>. Por eso alterno actividades creativas (música y fotografía) con
+                            hábitos que fortalecen mi mente y cuerpo (meditación, gimnasio y caminatas).
+                        </p>
+
+                        <p class="section__paragraph">
+                            Incluso los videojuegos los vivo como un espacio de <strong>estrategia</strong> y
+                            <strong>reto</strong>: me gusta analizar, tomar decisiones y mejorar con práctica.
+                        </p>
+
+                        <div class="section__note" role="note">
+                            <p class="note__text">
+                                <strong>Idea central:</strong> cuando mi rutina está equilibrada, trabajo mejor: con más
+                                paciencia, claridad y energía.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Imagen de apoyo (mismo patrón picture + figcaption) -->
+                    <figure class="section__figure hobbies__figure">
+                        <picture class="section__picture">
+                            <source type="image/avif" srcset="img/imagen-pasatiempos.avif" />
+                            <source type="image/webp" srcset="img/imagen-pasatiempos.webp" />
+                            <img class="section__image section__image--optimized" src="img/imagen-pasatiempos.webp"
+                                alt="Collage o composición visual de pasatiempos (guitarra, cámara, naturaleza, meditación y deporte)"
+                                loading="lazy" decoding="async" />
+                        </picture>
+
+                        <figcaption class="section__caption">
+                            Un equilibrio entre creatividad, salud y calma para mantenerme enfocado.
+                        </figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <!-- =========================
+               Galería (Grid Layout) - requisito principal
+               * Al menos 4 imágenes + pie de texto
+               * Reutiliza clases .gallery, .gallery__item, etc. (ya existen en tu CSS)
+          ========================== -->
+            <section class="content__section hobbies-gallery" aria-label="Galería de pasatiempos con imágenes">
+                <header class="section__header">
+                    <h2 class="section__title">Galería de pasatiempos</h2>
+                    <p class="section__lead">
+                        Aquí dejo mis gustos en formato visual. Cada imagen representa un hábito y lo que me aporta.
+                    </p>
+                </header>
+
+                <!-- Grid (reutiliza la galería del sitio) -->
+                <div class="gallery hobbies__grid" aria-label="Listado visual de pasatiempos">
+
+                    <!-- 1) Videojuegos -->
+                    <figure class="gallery__item hobby-card hobby-card--gaming">
+                        <picture class="gallery__picture hobby-card__picture">
+                            <source type="image/avif" srcset="img/hobby-videojuegos.avif" />
+                            <source type="image/webp" srcset="img/hobby-videojuegos.webp" />
+                            <img class="gallery__image gallery__image--optimized hobby-card__image"
+                                src="img/hobby-videojuegos.webp"
+                                alt="Imagen de videojuegos: setup de PC o consola con control, monitor encendido y ambiente gamer (sin marcas)"
+                                loading="lazy" decoding="async" />
+                        </picture>
+
+                        <figcaption class="gallery__caption hobby-card__caption">
+                            <strong class="hobby-card__title">Jugar videojuegos</strong><br />
+                            <span class="hobby-card__text">
+                                Me gustan los juegos de estrategia y retos: entrenan mi análisis, paciencia y toma de
+                                decisiones bajo presión.
+                            </span>
+                        </figcaption>
+                    </figure>
+
+                    <!-- 2) Guitarra -->
+                    <figure class="gallery__item hobby-card hobby-card--guitar">
+                        <picture class="gallery__picture hobby-card__picture">
+                            <source type="image/avif" srcset="img/hobby-guitarra.avif" />
+                            <source type="image/webp" srcset="img/hobby-guitarra.webp" />
+                            <img class="gallery__image gallery__image--optimized hobby-card__image"
+                                src="img/hobby-guitarra.webp"
+                                alt="Imagen de guitarra: persona tocando guitarra acústica o eléctrica, manos en el diapasón, ambiente cálido"
+                                loading="lazy" decoding="async" />
+                        </picture>
+
+                        <figcaption class="gallery__caption hobby-card__caption">
+                            <strong class="hobby-card__title">Tocar guitarra</strong><br />
+                            <span class="hobby-card__text">
+                                La música me ayuda a desconectarme y a ser constante: practicar mejora mi coordinación y
+                                disciplina.
+                            </span>
+                        </figcaption>
+                    </figure>
+
+                    <!-- 3) Fotografía -->
+                    <figure class="gallery__item hobby-card hobby-card--photo">
+                        <picture class="gallery__picture hobby-card__picture">
+                            <source type="image/avif" srcset="img/hobby-fotografia.avif" />
+                            <source type="image/webp" srcset="img/hobby-fotografia.webp" />
+                            <img class="gallery__image gallery__image--optimized hobby-card__image"
+                                src="img/hobby-fotografia.webp"
+                                alt="Imagen de fotografía: cámara en mano o colgada al cuello, enfoque en lente, escena urbana o naturaleza"
+                                loading="lazy" decoding="async" />
+                        </picture>
+
+                        <figcaption class="gallery__caption hobby-card__caption">
+                            <strong class="hobby-card__title">Tomar fotografías</strong><br />
+                            <span class="hobby-card__text">
+                                Me gusta capturar detalles y momentos. La fotografía fortalece mi mirada creativa y
+                                atención al detalle.
+                            </span>
+                        </figcaption>
+                    </figure>
+
+                    <!-- 4) Meditación -->
+                    <figure class="gallery__item hobby-card hobby-card--meditation">
+                        <picture class="gallery__picture hobby-card__picture">
+                            <source type="image/avif" srcset="img/hobby-meditacion.avif" />
+                            <source type="image/webp" srcset="img/hobby-meditacion.webp" />
+                            <img class="gallery__image gallery__image--optimized hobby-card__image"
+                                src="img/hobby-meditacion.webp"
+                                alt="Imagen de meditación: persona sentada en postura cómoda, ambiente tranquilo, luz suave, naturaleza o interior minimalista"
+                                loading="lazy" decoding="async" />
+                        </picture>
+
+                        <figcaption class="gallery__caption hobby-card__caption">
+                            <strong class="hobby-card__title">Meditación</strong><br />
+                            <span class="hobby-card__text">
+                                Me sirve para regular estrés y mantener calma. Cuando medito, regreso a mis tareas con
+                                claridad y enfoque.
+                            </span>
+                        </figcaption>
+                    </figure>
+
+                    <!-- 5) Gimnasio (extra) -->
+                    <figure class="gallery__item hobby-card hobby-card--gym">
+                        <picture class="gallery__picture hobby-card__picture">
+                            <source type="image/avif" srcset="img/hobby-gimnasio.avif" />
+                            <source type="image/webp" srcset="img/hobby-gimnasio.webp" />
+                            <img class="gallery__image gallery__image--optimized hobby-card__image"
+                                src="img/hobby-gimnasio.webp"
+                                alt="Imagen de gimnasio: pesas o mancuernas, persona entrenando fuerza, ambiente deportivo"
+                                loading="lazy" decoding="async" />
+                        </picture>
+
+                        <figcaption class="gallery__caption hobby-card__caption">
+                            <strong class="hobby-card__title">Ir al gimnasio</strong><br />
+                            <span class="hobby-card__text">
+                                Entrenar me ayuda a construir hábitos y disciplina. Siento más energía para estudiar y
+                                programar.
+                            </span>
+                        </figcaption>
+                    </figure>
+
+                    <!-- 6) Caminatas (extra) -->
+                    <figure class="gallery__item hobby-card hobby-card--walk">
+                        <picture class="gallery__picture hobby-card__picture">
+                            <source type="image/avif" srcset="img/hobby-caminatas.avif" />
+                            <source type="image/webp" srcset="img/hobby-caminatas.webp" />
+                            <img class="gallery__image gallery__image--optimized hobby-card__image"
+                                src="img/hobby-caminatas.webp"
+                                alt="Imagen de caminatas por la mañana: sendero o parque al amanecer, luz dorada, persona caminando"
+                                loading="lazy" decoding="async" />
+                        </picture>
+
+                        <figcaption class="gallery__caption hobby-card__caption">
+                            <strong class="hobby-card__title">Caminatas por las mañanas</strong><br />
+                            <span class="hobby-card__text">
+                                Me gusta iniciar el día con movimiento y aire fresco. Es un espacio para pensar, ordenar
+                                ideas y planear.
+                            </span>
+                        </figcaption>
+                    </figure>
+
+                </div>
+
+                <!-- Enlace para volver arriba -->
+                <p class="section__paragraph">
+                    <a class="content__link" href="#top">Volver arriba</a>
+                </p>
+            </section>
+
+            <!-- =========================
+               Cierre (sin “Explorar sitio/página”)
+          ========================== -->
+            <section class="content__section" aria-label="Cierre de pasatiempos">
+                <header class="section__header">
+                    <h2 class="section__title">¿Seguimos?</h2>
+                </header>
+
+                <p class="section__paragraph">
+                    Si quieres ver mi parte técnica y cómo aplico mi disciplina en proyectos, visita la sección de
+                    <a class="content__link" href="proyectos.html">Proyectos</a>. Si deseas escribirme, ve a
+                    <a class="content__link" href="contacto.html">Contacto</a>.
+                </p>
+            </section>
+
+        </article>
+    </main>
+
+    <!-- =========================
+       PIE DE PÁGINA (FOOTER)
+       * Igual al del sitio para consistencia
+  ========================== -->
+    <footer class="site-footer" aria-label="Pie de página">
+        <p class="footer__text">
+            &copy; <span class="footer__year">2025</span> · Portafolio de Fabián David Marín · Sitio Web personal
+        </p>
+
+        <nav class="footer__nav" aria-label="Navegación del pie de página">
+            <ul class="footer__list">
+                <li class="footer__item"><a class="footer__link" href="index.html">Inicio</a></li>
+                <li class="footer__item"><a class="footer__link" href="estudios.html">Estudios</a></li>
+                <li class="footer__item"><a class="footer__link" href="proyectos.html">Proyectos</a></li>
+                <li class="footer__item"><a class="footer__link" href="pasatiempos.html">Pasatiempos</a></li>
+                <li class="footer__item"><a class="footer__link" href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+</body>
+
+</html>
