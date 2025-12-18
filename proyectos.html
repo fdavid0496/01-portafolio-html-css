@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Proyectos de Fabián David Marín: experiencia académica, impacto institucional y proyectos de negocio que demuestran habilidades en Front-End, Back-End e ingeniería de requisitos." />
+    <title>Proyectos | Portafolio de Fabián David Marín</title>
+
+    <!-- CSS externo (se reutiliza el mismo archivo para mantener consistencia visual) -->
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body class="site-body">
+
+    <!-- =========================
+       CABECERA (HEADER)
+       * Nota: aquí NO se muestra la foto de perfil.
+       * Se mantiene la navegación y la intro, como en index.html
+  ========================== -->
+    <header class="site-header" id="top">
+
+        <!-- Marca / identidad (versión texto, sin imagen) -->
+        <div class="header__brand">
+            <div class="brand__caption" aria-label="Identidad del portafolio">
+                <strong class="brand__name">Fabián David Marín</strong>
+                <span class="brand__role">Desarrollo Web · Front-End y Back-End</span>
+            </div>
+        </div>
+
+        <!-- =========================
+         NAVEGACIÓN PRINCIPAL
+         (Debe enlazar a otros HTML)
+    ========================== -->
+        <nav class="site-nav" aria-label="Navegación principal">
+            <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="index.html">Inicio</a></li>
+                <li class="nav__item"><a class="nav__link" href="estudios.html">Estudios</a></li>
+
+                <!-- Página actual -->
+                <li class="nav__item"><a class="nav__link nav__link--active" href="proyectos.html">Proyectos</a></li>
+
+                <li class="nav__item"><a class="nav__link" href="pasatiempos.html">Pasatiempos</a></li>
+                <li class="nav__item"><a class="nav__link" href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <!-- Intro tipo “hero” (solo texto, consistente con index.html) -->
+        <section class="header__intro" aria-label="Introducción de la sección de proyectos">
+            <h1 class="intro__title">Proyectos</h1>
+            <p class="intro__subtitle">
+                Una selección de trabajos donde he aportado como <strong>analista de requisitos</strong>,
+                <strong>front-end</strong> y <strong>back-end</strong>. Los presento por categoría
+                (académicos, sociales e iniciativas de negocio) para vea rápido el impacto y mis
+                responsabilidades.
+            </p>
+        </section>
+    </header>
+
+    <!-- =========================
+       CONTENIDO PRINCIPAL
+       (Layout: sidebar + contenido)
+  ========================== -->
+    <main class="site-main">
+
+        <!-- =========================
+         BARRA LATERAL (ASIDE)
+         * Importante: NO incluir “Explorar este sitio o esta página”
+    ========================== -->
+        <aside class="sidebar" aria-label="Barra lateral con resumen de proyectos">
+
+            <section class="sidebar__card">
+                <h2 class="sidebar__title">En resumen</h2>
+                <ul class="sidebar__list">
+                    <li class="sidebar__item"><strong>Fortalezas:</strong> Requisitos · UI · APIs REST</li>
+                    <li class="sidebar__item"><strong>Experiencia:</strong> Proyectos académicos con enfoque real</li>
+                    <li class="sidebar__item"><strong>Metodologías:</strong> SCRUM · KANBAN</li>
+                    <li class="sidebar__item"><strong>Objetivo:</strong> Unirme a equipos con retos mayores (Junior)
+                    </li>
+                </ul>
+            </section>
+
+            <section class="sidebar__card">
+                <h2 class="sidebar__title">Tecnologías y prácticas</h2>
+                <ul class="sidebar__list">
+                    <li class="sidebar__item"><strong>Front-End:</strong> Angular · TypeScript · Routing · Componentes
+                    </li>
+                    <li class="sidebar__item"><strong>Back-End:</strong> Spring Boot · API REST · DTOs · Excepciones
+                    </li>
+                    <li class="sidebar__item"><strong>Datos:</strong> MySQL</li>
+                    <li class="sidebar__item"><strong>Calidad:</strong> Mantenibilidad · Arquitectura por capas</li>
+                </ul>
+            </section>
+
+        </aside>
+
+        <!-- =========================
+         CONTENIDO PRINCIPAL (ARTICLE)
+    ========================== -->
+        <article class="content" aria-label="Contenido principal de proyectos">
+
+            <!-- =========================
+               Contexto / propuesta de valor
+          ========================== -->
+            <section class="content__section projects" aria-label="Introducción y enfoque de proyectos">
+                <header class="section__header">
+                    <h2 class="section__title">Cómo presento mis proyectos</h2>
+                    <p class="section__lead">
+                        No solo indico “qué hice”, sino <strong>qué problema resolvía</strong>, <strong>mi rol</strong>,
+                        <strong>entregables</strong> y el valor que aporté al equipo o al cliente.
+                    </p>
+                </header>
+
+                <div class="section__grid">
+                    <div class="section__text">
+                        <p class="section__paragraph">
+                            Muchos de mis trabajos han sido académicos, pero los abordé con un enfoque profesional:
+                            comunicación con cliente, backlog priorizado, validación, trazabilidad, arquitectura por
+                            capas y entregables claros.
+                        </p>
+
+                        <div class="section__note" role="note">
+                            <p class="note__text">
+                                <strong>Nota:</strong> PRÓXIMAMENTE AGREGARÉ MIS REPOS.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =========================
+               PROYECTOS ACADÉMICOS
+               Requisito: listado SIN numeración (ul)
+          ========================== -->
+            <section class="content__section projects projects--academic" aria-label="Proyectos académicos">
+                <header class="section__header">
+                    <h2 class="section__title">Proyectos académicos</h2>
+                    <p class="section__lead">
+                        Proyectos donde demuestro habilidades técnicas y de trabajo en equipo: UI en Angular,
+                        APIs REST con Spring Boot y prácticas de desarrollo ordenado.
+                    </p>
+                </header>
+
+                <!-- Lista sin numeración -->
+                <ul class="projects__list" aria-label="Listado de proyectos académicos">
+
+                    <!-- ========= PROYECTO 2 ========= -->
+                    <li class="project-card project-card--frontend" aria-label="Proyecto Front-End Angular">
+                        <article class="project project--frontend">
+                            <header class="project__header">
+                                <h3 class="project__title">Aplicación Front-End para gestión de reportes financieros
+                                </h3>
+                                <p class="project__subtitle">
+                                    Contexto universitario (Vicerrectoría Financiera) · Integración con Back-End en
+                                    Spring Boot
+                                </p>
+                            </header>
+
+                            <div class="project__body">
+                                <p class="project__paragraph">
+                                    <strong>Rol:</strong> Desarrollador Front-End. Implementé vistas e interfaces de
+                                    usuario
+                                    enfocadas en la gestión de reportes, priorizando orden, consistencia y una
+                                    estructura
+                                    mantenible.
+                                </p>
+
+                                <p class="project__paragraph">
+                                    <strong>Aportes clave:</strong> construcción de componentes, routing, pipes, consumo
+                                    de
+                                    datos desde el Back-End y aplicación de TypeScript de forma obligatoria para mejorar
+                                    calidad y legibilidad.
+                                </p>
+
+                                <ul class="project__tags" aria-label="Etiquetas del proyecto">
+                                    <li class="project__tag"><strong>Tecnologías:</strong> Angular · TypeScript</li>
+                                    <li class="project__tag"><strong>Integración:</strong> API Back-End (Spring Boot)
+                                    </li>
+                                    <li class="project__tag"><strong>Metodología:</strong> SCRUM</li>
+                                    <li class="project__tag"><strong>Enfoque:</strong> Arquitectura por capas</li>
+                                </ul>
+
+                                <div class="project__highlights" aria-label="Entregables y resultados">
+                                    <h4 class="project__mini-title">Entregables</h4>
+                                    <ul class="project__list">
+                                        <li class="project__item">Interfaz modular basada en componentes.</li>
+                                        <li class="project__item">Navegación y estructura de rutas organizada.</li>
+                                        <li class="project__item">Pantallas orientadas a gestión y visualización de
+                                            reportes.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </li>
+
+                    <!-- ========= PROYECTO 3 ========= -->
+                    <li class="project-card project-card--backend" aria-label="Proyecto Back-End Spring Boot">
+                        <article class="project project--backend">
+                            <header class="project__header">
+                                <h3 class="project__title">API REST para gestión de publicaciones intelectuales</h3>
+                                <p class="project__subtitle">
+                                    Gestión de publicaciones de docentes · Persistencia en MySQL · Enfoque en capas
+                                </p>
+                            </header>
+
+                            <div class="project__body">
+                                <p class="project__paragraph">
+                                    <strong>Rol:</strong> Desarrollador Back-End. Implementé la lógica principal para
+                                    gestionar
+                                    publicaciones, aplicando arquitectura por capas y una API REST clara.
+                                </p>
+
+                                <p class="project__paragraph">
+                                    <strong>Aportes clave:</strong> capa de servicio y repositorio, DTOs, mappers,
+                                    manejo de
+                                    excepciones (incluyendo personalizadas) y estructura pensada para crecer.
+                                </p>
+
+                                <ul class="project__tags" aria-label="Etiquetas del proyecto">
+                                    <li class="project__tag"><strong>Tecnologías:</strong> Spring Boot · MySQL</li>
+                                    <li class="project__tag"><strong>Arquitectura:</strong> REST · Capas · DTOs</li>
+                                    <li class="project__tag"><strong>Metodología:</strong> SCRUM</li>
+                                    <li class="project__tag"><strong>Calidad:</strong> Excepciones · Mappers</li>
+                                </ul>
+
+                                <div class="project__highlights" aria-label="Entregables y resultados">
+                                    <h4 class="project__mini-title">Entregables</h4>
+                                    <ul class="project__list">
+                                        <li class="project__item">Endpoints REST para operaciones de gestión.</li>
+                                        <li class="project__item">Estructura por capas para facilitar mantenimiento.
+                                        </li>
+                                        <li class="project__item">Validación y control de errores con excepciones.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </li>
+
+                </ul>
+            </section>
+
+            <!-- =========================
+               PROYECTOS SOCIALES (impacto institucional)
+               Requisito: listado SIN numeración (ul)
+          ========================== -->
+            <section class="content__section projects projects--social"
+                aria-label="Proyectos sociales o de impacto institucional">
+                <header class="section__header">
+                    <h2 class="section__title">Proyectos sociales (impacto institucional)</h2>
+                    <p class="section__lead">
+                        Iniciativas donde el foco está en el servicio y la trazabilidad para usuarios:
+                        transparencia, seguimiento y claridad en el proceso.
+                    </p>
+                </header>
+
+                <!-- Lista sin numeración -->
+                <ul class="projects__list" aria-label="Listado de proyectos sociales">
+
+                    <!-- ========= PROYECTO 1 ========= -->
+                    <li class="project-card project-card--analysis"
+                        aria-label="Proyecto de ingeniería de requisitos PQRSF">
+                        <article class="project project--analysis">
+                            <header class="project__header">
+                                <h3 class="project__title">Sistema web de trazabilidad PQRSF (Universidad del Cauca)
+                                </h3>
+                                <p class="project__subtitle">
+                                    Seguimiento de solicitudes por etapas · Enfoque en requisitos y validación con
+                                    cliente
+                                </p>
+                            </header>
+
+                            <div class="project__body">
+                                <p class="project__paragraph">
+                                    <strong>Rol:</strong> Analista. Mi función fue interactuar con el cliente para
+                                    levantar,
+                                    documentar y validar requisitos funcionales y no funcionales, buscando que el
+                                    producto
+                                    fuera claro para el usuario final.
+                                </p>
+
+                                <p class="project__paragraph">
+                                    <strong>Problema que resolvía:</strong> permitir que el usuario final consultara la
+                                    <strong>trazabilidad</strong> de su solicitud (por ejemplo, una queja) y entendiera
+                                    en qué
+                                    etapa se encontraba, reduciendo incertidumbre y mejorando transparencia.
+                                </p>
+
+                                <ul class="project__tags" aria-label="Etiquetas del proyecto">
+                                    <li class="project__tag"><strong>Disciplina:</strong> Ingeniería de Requisitos</li>
+                                    <li class="project__tag"><strong>Entregables:</strong> Épicas · HU · Criterios ·
+                                        Mockups</li>
+                                    <li class="project__tag"><strong>Metodología:</strong> KANBAN</li>
+                                    <li class="project__tag"><strong>Habilidad:</strong> Validación y verificación</li>
+                                </ul>
+
+                                <div class="project__highlights" aria-label="Entregables y resultados">
+                                    <h4 class="project__mini-title">Lo que entregué / fortalecí</h4>
+                                    <ul class="project__list">
+                                        <li class="project__item">Backlog orientado a valor: épicas e historias
+                                            trazables.</li>
+                                        <li class="project__item">Criterios de aceptación para reducir ambigüedad.</li>
+                                        <li class="project__item">Mockups para alinear expectativas antes de construir.
+                                        </li>
+                                        <li class="project__item">Ciclos de revisión con cliente (V&amp;V) para asegurar
+                                            dirección correcta.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </li>
+
+                </ul>
+            </section>
+
+            <!-- =========================
+               PROYECTOS DE NEGOCIO (académico-laboral + proyección)
+               Requisito: listado SIN numeración (ul)
+          ========================== -->
+            <section class="content__section projects projects--business"
+                aria-label="Proyectos de negocio e iniciativas futuras">
+                <header class="section__header">
+                    <h2 class="section__title">Proyectos de negocio (y proyección)</h2>
+                    <p class="section__lead">
+                        Experiencias con contexto más cercano a operación real (gestión de contratos) y el tipo de retos
+                        donde busco crecer como desarrollador.
+                    </p>
+                </header>
+
+                <!-- Lista sin numeración -->
+                <ul class="projects__list" aria-label="Listado de proyectos de negocio">
+
+                    <!-- ========= PROYECTO 4 ========= -->
+                    <li class="project-card project-card--requirements"
+                        aria-label="Proyecto de requisitos para gestión de contratos">
+                        <article class="project project--requirements">
+                            <header class="project__header">
+                                <h3 class="project__title">Sistema web para gestión de contratos (Unidad de Salud)</h3>
+                                <p class="project__subtitle">
+                                    División TIC (Universidad del Cauca) · Requisitos con enfoque profesional y
+                                    validación continua
+                                </p>
+                            </header>
+
+                            <div class="project__body">
+                                <p class="project__paragraph">
+                                    <strong>Rol:</strong> Ingeniero de Requisitos. Realicé el levantamiento de
+                                    requisitos
+                                    funcionales y no funcionales y acompañé la validación constante con el cliente para
+                                    mantener el alcance controlado.
+                                </p>
+
+                                <p class="project__paragraph">
+                                    <strong>Aportes clave:</strong> elaboración de épicas, historias de usuario,
+                                    criterios de
+                                    aceptación, mockups y herramientas de organización como story mapping y formato
+                                    Merlin
+                                    (entre otros insumos de trabajo).
+                                </p>
+
+                                <ul class="project__tags" aria-label="Etiquetas del proyecto">
+                                    <li class="project__tag"><strong>Dominio:</strong> Gestión de contratos</li>
+                                    <li class="project__tag"><strong>Entregables:</strong> HU · Mockups · Story Mapping
+                                    </li>
+                                    <li class="project__tag"><strong>Metodología:</strong> SCRUM</li>
+                                    <li class="project__tag"><strong>Habilidad:</strong> Comunicación con cliente</li>
+                                </ul>
+
+                                <div class="project__highlights" aria-label="Entregables y resultados">
+                                    <h4 class="project__mini-title">Lo que aporté al equipo</h4>
+                                    <ul class="project__list">
+                                        <li class="project__item">Requisitos claros para reducir reprocesos.</li>
+                                        <li class="project__item">Validación frecuente para asegurar alineación y
+                                            avance.</li>
+                                        <li class="project__item">Estructura de entregables lista para desarrollo
+                                            incremental.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </li>
+
+                    <!-- ========= PROYECTOS FUTUROS ========= -->
+                    <li class="project-card project-card--future"
+                        aria-label="Proyectos en los que me gustaría participar">
+                        <article class="project project--future">
+                            <header class="project__header">
+                                <h3 class="project__title">Proyectos donde me gustaría participar</h3>
+                                <p class="project__subtitle">
+                                    Busco retos de mayor escala para demostrar y fortalecer habilidades en Front-End,
+                                    Back-End o Full-Stack
+                                </p>
+                            </header>
+
+                            <div class="project__body">
+                                <p class="project__paragraph">
+                                    Quiero aportar en equipos que construyan productos con usuarios reales, donde pueda
+                                    asumir retos
+                                    técnicos y crecer con buenas prácticas. Me adapto a distintos stacks porque soy
+                                    disciplinado con
+                                    los fundamentos y me gusta aprender con profundidad.
+                                </p>
+
+                                <!-- Lista sin numeración de tipos de proyectos deseados -->
+                                <ul class="project__list" aria-label="Tipos de proyectos deseados">
+                                    <li class="project__item"><strong>Full-Stack:</strong> aplicaciones con módulos
+                                        completos (UI + API + datos).</li>
+                                    <li class="project__item"><strong>Producto web:</strong> mejoras continuas, backlog,
+                                        métricas e iteración.</li>
+                                    <li class="project__item"><strong>Arquitectura:</strong> proyectos con buenas
+                                        prácticas, patrones y código mantenible.</li>
+                                    <li class="project__item"><strong>Equipo:</strong> colaboración real (code review,
+                                        sprints, comunicación constante).</li>
+                                </ul>
+
+                                <div class="section__note" role="note">
+                                    <p class="note__text">
+                                        <strong>Mi objetivo profesional:</strong> integrarme formalmente como
+                                        desarrollador junior y
+                                        avanzar hacia retos de mayor responsabilidad con base en calidad y disciplina.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </li>
+
+                </ul>
+            </section>
+
+            <!-- Enlace para volver arriba -->
+            <section class="content__section" aria-label="Cierre de la sección de proyectos">
+                <header class="section__header">
+                    <h2 class="section__title">Siguiente paso</h2>
+                </header>
+
+                <p class="section__paragraph">
+                    Si quieres conocer más sobre mí fuera del ámbito técnico, puedes ir a
+                    <a class="content__link" href="pasatiempos.html">Pasatiempos</a> o contactarme desde
+                    <a class="content__link" href="contacto.html">Contacto</a>.
+                </p>
+
+                <p class="section__paragraph">
+                    <a class="content__link" href="#top">Volver arriba</a>
+                </p>
+            </section>
+
+        </article>
+    </main>
+
+    <!-- =========================
+       PIE DE PÁGINA (FOOTER)
+       * Se mantiene igual al de index.html para consistencia
+  ========================== -->
+    <footer class="site-footer" aria-label="Pie de página">
+        <p class="footer__text">
+            &copy; <span class="footer__year">2025</span> · Portafolio de Fabián David Marín · Sitio Web personal
+        </p>
+
+        <nav class="footer__nav" aria-label="Navegación del pie de página">
+            <ul class="footer__list">
+                <li class="footer__item"><a class="footer__link" href="index.html">Inicio</a></li>
+                <li class="footer__item"><a class="footer__link" href="estudios.html">Estudios</a></li>
+                <li class="footer__item"><a class="footer__link" href="proyectos.html">Proyectos</a></li>
+                <li class="footer__item"><a class="footer__link" href="pasatiempos.html">Pasatiempos</a></li>
+                <li class="footer__item"><a class="footer__link" href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+</body>
+
+</html>

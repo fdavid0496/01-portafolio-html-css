@@ -760,3 +760,249 @@ a:focus-visible {
         }
     }
 }
+
+/* =========================================================
+   10) Proyectos (proyectos.html)
+   - Solo estilos para la página de proyectos
+   - Mantiene la estética de “tarjetas” + acentos naranjas del sitio
+   ========================================================= */
+
+/* 10.1) Acento por categoría (sección) */
+.projects {
+    --cat-accent: var(--accent);
+}
+
+/* Ajusta el “color guía” de cada bloque */
+.projects--academic {
+    --cat-accent: var(--accent-2);
+}
+
+.projects--social {
+    --cat-accent: var(--link);
+}
+
+.projects--business {
+    --cat-accent: var(--accent);
+}
+
+/* Línea decorativa bajo el título de cada sección de proyectos */
+.projects>.section__header .section__title {
+    position: relative;
+}
+
+.projects>.section__header .section__title::after {
+    content: "";
+    display: block;
+    width: 84px;
+    height: 4px;
+    margin-top: 10px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--cat-accent), transparent);
+    opacity: 0.9;
+}
+
+/* 10.2) Listado (ul) de proyectos */
+.projects__list {
+    margin-top: var(--space-3);
+    display: grid;
+    gap: var(--space-4);
+}
+
+/* 2 columnas solo cuando realmente hay espacio (desktop ancho) */
+@media (min-width: 1080px) {
+    .projects__list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* 10.3) Tarjeta de proyecto (li) */
+.project-card {
+    /* Variable para colorear acentos internos (hereda a bullets/etiquetas) */
+    --project-accent: var(--accent);
+
+    position: relative;
+    padding: var(--space-4);
+
+    background: rgba(15, 26, 49, 0.55);
+    border: 1px solid var(--line);
+    border-radius: calc(var(--radius) - 4px);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.22);
+
+    overflow: hidden;
+    transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+}
+
+/* Barra lateral de acento */
+.project-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 6px;
+    background: linear-gradient(180deg, var(--project-accent), rgba(255, 255, 255, 0));
+    opacity: 0.95;
+}
+
+.project-card:hover {
+    transform: translateY(-2px);
+    background: rgba(15, 26, 49, 0.65);
+    border-color: rgba(255, 138, 42, 0.35);
+}
+
+/* Variantes por tipo de proyecto */
+.project-card--frontend {
+    --project-accent: var(--accent-2);
+}
+
+.project-card--backend {
+    --project-accent: var(--accent);
+}
+
+.project-card--analysis {
+    --project-accent: var(--link);
+}
+
+.project-card--requirements {
+    --project-accent: rgba(255, 178, 106, 0.95);
+}
+
+/* “Futuro / proyección”: más neutro y distinto */
+.project-card--future {
+    --project-accent: rgba(184, 194, 230, 0.95);
+    border-style: dashed;
+    background: rgba(15, 26, 49, 0.48);
+}
+
+/* 10.4) Contenido interno del proyecto */
+.project {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.project__header,
+.project__body {
+    /* separa el contenido de la barra de acento */
+    padding-left: 10px;
+}
+
+.project__title {
+    font-family: var(--font-title);
+    font-size: 1.15rem;
+    letter-spacing: 0.2px;
+    line-height: 1.25;
+}
+
+.project__subtitle {
+    margin-top: 6px;
+    color: var(--muted);
+    max-width: 80ch;
+}
+
+.project__body {
+    display: grid;
+    gap: 12px;
+}
+
+.project__paragraph {
+    color: rgba(233, 238, 252, 0.92);
+}
+
+.project__paragraph strong {
+    color: var(--accent-2);
+}
+
+/* 10.5) Etiquetas (chips) */
+.project__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 6px;
+}
+
+.project__tag {
+    padding: 8px 12px;
+    border-radius: 999px;
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    background: rgba(255, 255, 255, 0.05);
+
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.project__tag strong {
+    color: var(--text);
+}
+
+/* 10.6) Bloque “Entregables / Lo que aporté” */
+.project__highlights {
+    margin-top: 6px;
+    padding: 14px 16px;
+
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.project__mini-title {
+    font-family: var(--font-title);
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+/* Lista interna (sin numeración): bullets personalizados */
+.project__list {
+    display: grid;
+    gap: 8px;
+}
+
+.project__item {
+    position: relative;
+    padding-left: 18px;
+    color: var(--muted);
+}
+
+.project__item strong {
+    color: var(--text);
+}
+
+.project__item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.8em;
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+
+    background: var(--project-accent);
+    box-shadow: 0 0 0 3px rgba(255, 138, 42, 0.10);
+
+    transform: translateY(-50%);
+}
+
+/* 10.7) Ajustes móviles */
+@media (max-width: 640px) {
+    .project-card {
+        padding: var(--space-3);
+    }
+
+    .project__header,
+    .project__body {
+        padding-left: 8px;
+    }
+
+    .project__tags {
+        gap: 8px;
+    }
+
+    .project__tag {
+        font-size: 0.92rem;
+    }
+
+    .project__highlights {
+        padding: 12px 14px;
+    }
+}
