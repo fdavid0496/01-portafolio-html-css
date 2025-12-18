@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Estudios académicos de Fabián David Marín - formación académica, cursos y trayectoria." />
+    <title>Estudios | Portafolio de Fabián David Marín</title>
+
+    <!-- CSS externo (se reutiliza el mismo archivo para mantener consistencia visual) -->
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body class="site-body">
+
+    <!-- =========================
+       CABECERA (HEADER)
+       * Nota: aquí NO se muestra la foto de perfil.
+       * Se mantiene la navegación y la intro, como en index.html
+  ========================== -->
+    <header class="site-header" id="top">
+
+        <!-- Marca / identidad (versión texto, sin imagen) -->
+        <div class="header__brand">
+            <!-- Reutilizo las clases de marca para que el CSS futuro sea consistente -->
+            <div class="brand__caption" aria-label="Identidad del portafolio">
+                <strong class="brand__name">Fabián David Marín</strong>
+                <span class="brand__role">Desarrollo Web · Front-End y Back-End</span>
+            </div>
+        </div>
+
+        <!-- =========================
+         NAVEGACIÓN PRINCIPAL
+         (Debe enlazar a otros HTML)
+    ========================== -->
+        <nav class="site-nav" aria-label="Navegación principal">
+            <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="index.html">Inicio</a></li>
+
+                <!-- Página actual -->
+                <li class="nav__item"><a class="nav__link nav__link--active" href="estudios.html">Estudios</a></li>
+
+                <li class="nav__item"><a class="nav__link" href="proyectos.html">Proyectos</a></li>
+                <li class="nav__item"><a class="nav__link" href="pasatiempos.html">Pasatiempos</a></li>
+                <li class="nav__item"><a class="nav__link" href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <!-- Intro tipo “hero” (solo texto, consistente con index.html) -->
+        <section class="header__intro" aria-label="Introducción de la sección de estudios">
+            <h1 class="intro__title">Estudios académicos</h1>
+            <p class="intro__subtitle">
+                Aquí presento mi trayectoria de formación: desde la educación básica hasta estudios universitarios y
+                cursos de especialización que fortalecen mi perfil como desarrollador.
+            </p>
+        </section>
+    </header>
+
+    <!-- =========================
+       CONTENIDO PRINCIPAL
+       (Layout: sidebar + contenido)
+  ========================== -->
+    <main class="site-main">
+
+        <!-- =========================
+         BARRA LATERAL (ASIDE)
+         Útil para: resumen, datos rápidos, enlaces internos
+    ========================== -->
+        <aside class="sidebar" aria-label="Barra lateral con navegación y resumen de estudios">
+
+            <section class="sidebar__card">
+                <h2 class="sidebar__title">En resumen</h2>
+                <ul class="sidebar__list">
+                    <li class="sidebar__item"><strong>Enfoque:</strong> Desarrollo Web (Front-End / Back-End)</li>
+                    <li class="sidebar__item"><strong>Formación:</strong> Base académica + cursos de actualización</li>
+                    <li class="sidebar__item"><strong>Objetivo:</strong> Mejorar calidad, arquitectura y buenas
+                        prácticas</li>
+                </ul>
+            </section>
+
+            <section class="sidebar__card">
+                <h2 class="sidebar__title">Explorar esta página</h2>
+
+                <!-- Enlaces internos (igual idea que en index.html, pero para esta sección) -->
+                <nav class="sidebar__nav" aria-label="Navegación interna de estudios">
+                    <ul class="sidebar__list">
+                        <li class="sidebar__item"><a class="sidebar__link" href="#introduccion">Introducción</a></li>
+                        <li class="sidebar__item"><a class="sidebar__link" href="#tabla-estudios">Tabla de estudios</a>
+                        </li>
+                        <li class="sidebar__item"><a class="sidebar__link" href="#siguiente">Siguiente paso</a></li>
+                    </ul>
+                </nav>
+            </section>
+
+            <!-- Nota: si luego quieres agregar una imagen aquí, puedes copiar la estructura <figure> usada en index.html -->
+        </aside>
+
+        <!-- =========================
+         CONTENIDO PRINCIPAL (ARTICLE)
+    ========================== -->
+        <article class="content" aria-label="Contenido principal de estudios">
+
+            <!-- ===== Introducción ===== -->
+            <section class="content__section" id="introduccion">
+                <header class="section__header">
+                    <h2 class="section__title">Mi camino de formación</h2>
+                    <p class="section__lead">
+                        Mi formación combina educación formal y aprendizaje continuo. Me interesa mantenerme
+                        actualizado,
+                        reforzar fundamentos y aplicar lo aprendido en proyectos reales.
+                    </p>
+                </header>
+
+                <div class="section__grid">
+                    <div class="section__text">
+                        <p class="section__paragraph">
+                            En esta sección organizo mis estudios en una tabla para que sea fácil ver el
+                            <strong>título o curso</strong>, la <strong>institución</strong> y el <strong>año</strong>.
+                            Esto permite entender mi evolución académica de forma rápida y clara.
+                        </p>
+
+                        <div class="section__note" role="note">
+                            <p class="note__text">
+                                <strong>Nota:</strong> a medida que complete nuevos cursos, certificaciones o
+                                diplomados,
+                                los iré agregando aquí para mantener el portafolio actualizado.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== Tabla de estudios (requisito principal) ===== -->
+            <section class="content__section" id="tabla-estudios" aria-label="Tabla de estudios académicos">
+                <header class="section__header">
+                    <h2 class="section__title">Estudios realizados</h2>
+                    <p class="section__lead">
+                        Resumen académico.
+                    </p>
+                </header>
+
+                <!-- Tabla accesible: caption + thead/tbody + th con scope -->
+                <div class="section__table">
+                    <table class="studies-table">
+                        <caption class="table__caption">
+                            Trayectoria académica y cursos relevantes.
+                        </caption>
+
+                        <thead class="table__head">
+                            <tr class="table__row">
+                                <th class="table__header" scope="col">#</th>
+                                <th class="table__header" scope="col">Título o curso</th>
+                                <th class="table__header" scope="col">Institución</th>
+                                <th class="table__header" scope="col">Año</th>
+                            </tr>
+                        </thead>
+
+                        <tbody class="table__body">
+                            <tr class="table__row">
+                                <th class="table__cell table__cell--index" scope="row">1</th>
+                                <td class="table__cell">Primaria</td>
+                                <td class="table__cell">Institución Educativa Don Bosco</td>
+                                <td class="table__cell">2005</td>
+                            </tr>
+
+                            <tr class="table__row">
+                                <th class="table__cell table__cell--index" scope="row">2</th>
+                                <td class="table__cell">Bachillerato</td>
+                                <td class="table__cell">Institución Educativa Francisco Antonio de Ulloa</td>
+                                <td class="table__cell">2013</td>
+                            </tr>
+
+                            <tr class="table__row">
+                                <th class="table__cell table__cell--index" scope="row">3</th>
+                                <td class="table__cell">Ingeniería de Sistemas</td>
+                                <td class="table__cell">Universidad del Cauca</td>
+                                <td class="table__cell">2017 - Actual</td>
+                            </tr>
+
+                            <tr class="table__row">
+                                <th class="table__cell table__cell--index" scope="row">4</th>
+                                <td class="table__cell">Java 23 Web Developer: Java Fundamentos, Spring Boot 3 y Angular
+                                    19</td>
+                                <td class="table__cell">Galaxy Trainnig</td>
+                                <td class="table__cell">2025</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Enlace para volver arriba -->
+                <p class="section__paragraph">
+                    <a class="content__link" href="#top">Volver arriba</a>
+                </p>
+            </section>
+
+            <!-- ===== Cierre / siguiente paso ===== -->
+            <section class="content__section" id="siguiente" aria-label="Cierre de la sección de estudios">
+                <header class="section__header">
+                    <h2 class="section__title">Siguiente paso</h2>
+                </header>
+
+                <p class="section__paragraph">
+                    Si quieres ver cómo aplico lo aprendido, puedes continuar a la sección de
+                    <a class="content__link" href="proyectos.html">Proyectos</a>.
+                </p>
+            </section>
+
+        </article>
+    </main>
+
+    <!-- =========================
+       PIE DE PÁGINA (FOOTER)
+       * Se mantiene igual al de index.html para consistencia
+  ========================== -->
+    <footer class="site-footer" aria-label="Pie de página">
+        <p class="footer__text">
+            &copy; <span class="footer__year">2025</span> · Portafolio de Fabián David Marín · Sitio Web personal
+        </p>
+
+        <nav class="footer__nav" aria-label="Navegación del pie de página">
+            <ul class="footer__list">
+                <li class="footer__item"><a class="footer__link" href="index.html">Inicio</a></li>
+                <li class="footer__item"><a class="footer__link" href="estudios.html">Estudios</a></li>
+                <li class="footer__item"><a class="footer__link" href="proyectos.html">Proyectos</a></li>
+                <li class="footer__item"><a class="footer__link" href="pasatiempos.html">Pasatiempos</a></li>
+                <li class="footer__item"><a class="footer__link" href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+</body>
+
+</html>
